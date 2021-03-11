@@ -1,4 +1,4 @@
-vvar wall, thikness
+var wall, thikness
 var bullet, speed, weight
 
 function setup() {
@@ -10,11 +10,11 @@ function setup() {
   bullet.shapeColor("white")
   bullet.velocityX = speed 
   wall = createSprite(1200, 200, thikness, height/2)
-  wall.shapeColor(80,80,80)
+  wall.shapeColor = color (80,80,80)
   }
 
 function draw() {
-  background(255,255,255);  
+  background(0,0,0);  
   if (hasCollided(bullet,wall)){
     bullet.velocityX = 0
     var damage = 0.5 * weight * speed * speed/(thikness * thikness * thikness)
@@ -29,9 +29,9 @@ function draw() {
   drawSprites();
 }
 
-function hasColllided(1bullet,1wall){
-  bulletRightEdge = 1bullet.x + 1bullet.width
-  wallLeftEdge = 1wall.x
+function hasColllided(lbullet,lwall){
+  bulletRightEdge = lbullet.x + lbullet.width
+  wallLeftEdge = lwall.x
   if (bulletRightEdge>=wallLeftEdge){
     return true
   }
