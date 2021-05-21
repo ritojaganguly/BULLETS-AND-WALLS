@@ -29,7 +29,7 @@ function draw() {
   drawSprites();
 }
 
-function hasColllided(lbullet,lwall){
+function hasCollided(lbullet,lwall){
   bulletRightEdge = lbullet.x + lbullet.width
   wallLeftEdge = lwall.x
   if (bulletRightEdge>=wallLeftEdge){
